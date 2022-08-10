@@ -1,0 +1,11 @@
+// basic connections
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+
+// connecting page components
+@import "components/faq";
+@import "components/images-faq";
+@import "components/spoilers-faq";
+@import "components/spoiler-open";

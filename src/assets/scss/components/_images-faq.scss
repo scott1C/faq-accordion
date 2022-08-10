@@ -1,0 +1,88 @@
+.images-faq {
+    position: relative;
+
+    // .images-faq__decorative-image
+
+    &__decorative-image {
+        position: absolute;
+        z-index: 1;
+    }
+
+    // .images-faq__decorative-shadow
+
+    &__decorative-shadow {
+        position: absolute;
+        top: -65px;
+        left: 0;
+    }
+
+    // .images-faq__decorative-box
+
+    &__decorative-box {
+        position: absolute;
+        left: -92px;
+        top: 135px;
+        z-index: 1;
+    }
+}
+
+
+@include desktop {
+    .images-faq {
+
+        &__decorative-image {
+            top: 52px;
+            width: 350px;
+        }
+
+        &__decorative-shadow {
+            height: 510px
+        }
+    }
+}
+
+@include small-tablet {
+    .images-faq {
+
+        &__decorative-image {
+            display: none;
+
+            &--small {
+                position: absolute;
+                top: -240px;
+                left: 48%;
+                transform: translateX(-50%);
+            }
+        }
+
+        &__decorative-shadow {
+            display: none;
+
+            &--small {
+                position: absolute;
+                top: -134px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+    }
+}
+
+@include mobile {
+    .images-faq {
+
+        &__decorative-box {
+            display: none;
+        }
+    }
+}
+
+@include min-small-tablet {
+    .images-faq {
+
+        &__decorative-image--small,
+        &__decorative-shadow--small {
+            display: none;
+        }
+    }
+}

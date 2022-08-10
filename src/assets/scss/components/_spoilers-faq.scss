@@ -1,0 +1,87 @@
+.spoilers-faq {
+
+
+    // .spoilers-faq__item
+
+    &__item {
+        width: 333px;
+        padding: 18px 0;
+        border-bottom: 1px solid var(--almost-white);
+        cursor: pointer;
+    }
+
+    // .spoilers-faq__button 
+
+    &__button {
+        width: 100%;
+        @include flex-all-sb;
+    }
+
+    // .spoilers-faq__title
+
+    &__title {
+        font-weight: 400;
+        font-size: rem(14);
+        line-height: 1.21;
+        color: var(--dark-blue);
+        transition: color .15s ease-in-out;
+
+        &:hover {
+            color: var(--orange);
+        }
+    }
+
+    // .spoilers-faq__icon 
+
+    &__icon {
+        width: 8px;
+        height: 6px;
+        background-image: url(../img/spoilers-faq/arrow.svg);
+        @include bg-cover;
+        transition: transform .25s ease;
+    }
+
+    // .spoilers-faq__text
+
+    &__text {
+        max-width: 319px;
+        height: 0;
+        box-sizing: content-box;
+        font-weight: 400;
+        font-size: rem(12);
+        line-height: 1.5;
+        color: var(--gray);
+        opacity: 0;
+        pointer-events: none;
+        overflow: hidden;
+        transition: all .3s ease;
+    }
+}
+
+
+@include mobile {
+    .spoilers-faq {
+
+        &__item {
+            width: 278px;
+        }
+
+        &__title {
+            font-size: rem(13);
+        }
+
+        &__text {
+            max-width: 242px;
+            font-size: rem(12);
+        }
+    }
+}
+
+@include small-mobile {
+    .spoilers-faq {
+
+        &__item {
+            width: 252px;
+        }
+    }
+}

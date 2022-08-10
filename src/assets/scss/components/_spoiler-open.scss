@@ -1,0 +1,18 @@
+.spoiler-open {
+    .spoilers-faq {
+
+        &__title {
+            font-weight: 700;
+        }
+
+        &__icon {
+            transform: rotate(-180deg);
+        }
+
+        &__text {
+            padding-top: 13px;
+            opacity: 1;
+            pointer-events: all;
+        }
+    }
+}
